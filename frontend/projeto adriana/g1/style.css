@@ -1,4 +1,4 @@
-/* --- ESTILO REALISTA DO G1 (MODO NORMAL) --- */
+/* --- ESTILO BASE DO G1 (MODO NORMAL COM PROPAGANDAS) --- */
 * {
   box-sizing: border-box;
 }
@@ -11,7 +11,7 @@ body {
   color: #222222;
 }
 
-/* Barra do EasyWeb no topo */
+/* Painel Fixo EasyWeb */
 #easyweb-bar {
   position: fixed;
   top: 0;
@@ -34,7 +34,7 @@ body {
 }
 
 .btn-ew {
-  padding: 6px 12px;
+  padding: 8px 14px;
   font-size: 13px;
   border: none;
   border-radius: 4px;
@@ -42,19 +42,65 @@ body {
   color: white;
   font-weight: bold;
   cursor: pointer;
+  transition: background-color 0.2s;
 }
 
 .btn-ia {
   background-color: #6b46c1;
 }
 
-/* Cabeçalho do G1 */
+/* Banners e Blocos de Propaganda (Modo Comum) */
+.anuncio-banner {
+  margin-top: 55px;
+  background-color: #fff3cd;
+  border-bottom: 1px solid #ffeeba;
+  padding: 10px 20px;
+  text-align: center;
+  font-size: 13px;
+  color: #856404;
+}
+
+.propaganda-meio-texto {
+  background-color: #f1f5f9;
+  border: 2px dashed #cbd5e1;
+  padding: 15px;
+  margin: 20px 0;
+  text-align: center;
+  border-radius: 6px;
+}
+
+.box-publicidade {
+  background-color: #f4f4f4;
+  border: 1px solid #e2e2e2;
+  padding: 15px;
+  margin-bottom: 25px;
+  border-radius: 4px;
+}
+
+.tag-publicidade {
+  font-size: 10px;
+  color: #888888;
+  font-weight: bold;
+  display: block;
+  margin-bottom: 5px;
+}
+
+.btn-anuncio {
+  background-color: #0669de;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  width: 100%;
+  margin-top: 8px;
+}
+
+/* Estrutura G1 */
 .g1-header-global {
-  margin-top: 50px;
-  background-color: #c4170c; /* Vermelho G1 */
+  background-color: #c4170c;
   color: white;
   padding: 12px 0;
-  border-bottom: 3px solid #991008;
 }
 
 .g1-header-content {
@@ -67,20 +113,18 @@ body {
 }
 
 .g1-logo {
-  font-size: 38px;
+  font-size: 36px;
   font-weight: 900;
-  letter-spacing: -2px;
   font-family: Arial Black, sans-serif;
 }
 
 .g1-regiao {
-  font-size: 13px;
+  font-size: 12px;
   font-weight: bold;
   border-left: 1px solid rgba(255,255,255,0.4);
-  padding-left: 12px;
+  padding-left: 10px;
 }
 
-/* Layout da Matéria */
 .container-g1 {
   max-width: 1000px;
   margin: 20px auto;
@@ -102,9 +146,7 @@ body {
 .chapeu-categoria {
   color: #c4170c;
   font-weight: bold;
-  font-size: 13px;
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
+  font-size: 12px;
 }
 
 .titulo-noticia {
@@ -116,7 +158,7 @@ body {
 }
 
 .subtitulo-noticia {
-  font-size: 18px;
+  font-size: 17px;
   line-height: 1.4;
   color: #555555;
   margin-bottom: 15px;
@@ -125,7 +167,6 @@ body {
 .autor-data {
   font-size: 12px;
   color: #666666;
-  line-height: 1.4;
 }
 
 .divisor {
@@ -137,7 +178,6 @@ body {
 .imagem-materia img {
   width: 100%;
   border-radius: 4px;
-  display: block;
 }
 
 .legenda-imagem {
@@ -155,34 +195,8 @@ body {
   margin-bottom: 18px;
 }
 
-/* Barra Lateral e Publicidade */
 .barra-lateral-g1 {
   flex: 1;
-}
-
-.box-publicidade {
-  background-color: #f4f4f4;
-  border: 1px solid #e2e2e2;
-  padding: 15px;
-  margin-bottom: 25px;
-  border-radius: 4px;
-}
-
-.tag-ads {
-  font-size: 10px;
-  color: #999999;
-  display: block;
-  margin-bottom: 8px;
-}
-
-.btn-ads {
-  background-color: #0669de;
-  color: white;
-  border: none;
-  padding: 8px 12px;
-  border-radius: 4px;
-  cursor: pointer;
-  width: 100%;
 }
 
 .mais-lidas-g1 h3 {
@@ -196,7 +210,6 @@ body {
 .mais-lidas-g1 ul {
   list-style: none;
   padding: 0;
-  margin: 0;
 }
 
 .mais-lidas-g1 li {
@@ -213,9 +226,17 @@ body {
 }
 
 
-/* --- TRANSFORMAÇÃO DO EASYWEB (MODO FÁCIL) --- */
+/* --- REGRAS DO EASYWEB: REMOÇÃO DE ANÚNCIO E MODO FÁCIL --- */
 
-/* Níveis 1, 2 e 3: Aumento visual adaptado para idosos */
+/* 1. ELIMINAÇÃO TOTAL DE ANÚNCIONALIDADES E PROPAGANDAS */
+body.ew-modo-facil .anuncio-banner,
+body.ew-modo-facil .propaganda-meio-texto,
+body.ew-modo-facil .box-publicidade,
+body.ew-limpar-distracao .barra-lateral-g1 {
+  display: none !important; /* Oculta totalmente propagandas e distracting elements */
+}
+
+/* 2. REESTRUTURAÇÃO DO TEXTO PARA LEITURA CONFORTÁVEL */
 body.ew-modo-facil .titulo-noticia {
   font-size: 38px !important;
   line-height: 1.2 !important;
@@ -228,17 +249,13 @@ body.ew-modo-facil .subtitulo-noticia {
 }
 
 body.ew-modo-facil .corpo-texto p {
-  font-size: 24px !important; /* Leitura ampliada */
-  line-height: 2.0 !important;
+  font-size: 24px !important; /* Fonte legível para idosos */
+  line-height: 2.0 !important; /* Espaçamento duplo */
   color: #000000 !important;
   margin-bottom: 30px !important;
 }
 
-/* Oculta barras de propaganda e notícias paralelas para foco de atenção */
-body.ew-limpar-distracao .barra-lateral-g1 {
-  display: none !important;
-}
-
+/* Expandir a área de texto para 100% após ocultar a barra lateral */
 body.ew-limpar-distracao .materia-principal {
   flex: 1 1 100% !important;
 }

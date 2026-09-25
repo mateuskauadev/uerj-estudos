@@ -8,7 +8,7 @@
 </head>
 <body>
 
-  <!-- BARRA DE CONTROLE DO EASYWEB (PAINEL FLUTUANTE) -->
+  <!-- PAINEL FIXO DO EASYWEB NO TOPO -->
   <div id="easyweb-bar">
     <div class="easyweb-brand">
       <strong>EasyWeb </strong>
@@ -16,10 +16,10 @@
     <div class="easyweb-controls">
       <label for="select-nivel">Nível de Ajuda:</label>
       <select id="select-nivel">
-        <option value="0">Desativado (G1 Normal)</option>
-        <option value="1">Nível 1 (Texto Amplo)</option>
-        <option value="2">Nível 2 (Texto + Leitor de Voz)</option>
-        <option value="3">Nível 3 (Completo + Resumo IA)</option>
+        <option value="0">Desativado (G1 Comum)</option>
+        <option value="1">Nível 1 (Texto Amplo + Sem Anúncios)</option>
+        <option value="2">Nível 2 (Visual + Leitor de Voz)</option>
+        <option value="3">Nível 3 (Completo + Resumo com IA)</option>
       </select>
 
       <button id="btn-ler-voz" class="btn-ew"> Ler Notícia</button>
@@ -28,7 +28,13 @@
     </div>
   </div>
 
-  <!-- CABEÇALHO OFICIAL ESTILO GLOBO/G1 -->
+  <!-- ANÚNCIO / BANNER PROPAGANDA SUPERIOR (SERÁ REMOVIDO PELO EASYWEB) -->
+  <div class="anuncio-banner top-ad">
+    <span class="tag-publicidade">PUBLICIDADE</span>
+    <p>⚡ <strong>PROMOÇÃO IMPERDÍVEL:</strong> Troque de carro hoje mesmo com juros zero! Clique aqui.</p>
+  </div>
+
+  <!-- CABEÇALHO DO G1 -->
   <header class="g1-header-global">
     <div class="g1-header-content">
       <span class="g1-logo">g1</span>
@@ -36,11 +42,12 @@
     </div>
   </header>
 
-  <!-- CORPO DA NOTÍCIA -->
+  <!-- CONTAINER PRINCIPAL DA MATÉRIA -->
   <div class="container-g1">
     <div class="layout-g1">
+      
+      <!-- COLUNA DA NOTÍCIA -->
       <main class="materia-principal">
-        <!-- Chapéu / Categoria -->
         <span class="chapeu-categoria">ECONOMIA & PREVIDÊNCIA</span>
         
         <h1 class="titulo-noticia">Governo confirma novas regras de reajuste para aposentadorias do INSS</h1>
@@ -53,37 +60,45 @@
 
         <hr class="divisor">
 
-        <!-- Imagem da Notícia -->
         <div class="imagem-materia">
-          <img src="https://picsum.photos/800/450" alt="Imagem ilustrativa do INSS">
+          <img src="https://picsum.photos/800/400" alt="Atendimento no INSS">
           <span class="legenda-imagem">Atendimento em agência do INSS. Mudança afetará cálculo do reajuste anual.</span>
         </div>
 
-        <!-- Texto da Matéria -->
+        <!-- TEXTO DA MATÉRIA -->
         <div class="corpo-texto">
           <p>O Ministério da Previdência Social confirmou nesta manhã os novos critérios de reajuste anual para aposentados e pensionistas do Instituto Nacional do Seguro Social (INSS). A medida visa recompor as perdas inflacionárias do último período.</p>
+          
+          <!-- ANÚNCIO NO MEIO DO TEXTO (SERÁ REMOVIDO PELO EASYWEB) -->
+          <div class="propaganda-meio-texto">
+            <span class="tag-publicidade">ANÚNCIO PATROCINADO</span>
+            <p>💰 Abra sua conta digital gratuita e ganhe cartão de crédito sem anuidade!</p>
+            <button class="btn-anuncio">Baixar App</button>
+          </div>
+
           <p>De acordo com o texto publicado no Diário Oficial da União, o cálculo levará em consideração a taxa de inflação acumulada do IPCA somada ao crescimento do Produto Interno Bruto (PIB) dos últimos dois anos.</p>
           <p>Para consultar o valor exato do benefício atualizado, o cidadão poderá acessar o aplicativo Meu INSS ou ligar para a central de atendimento telefônico no número 135 a partir da próxima semana.</p>
         </div>
       </main>
 
-      <!-- BARRA LATERAL (PROPAGANDAS E NOTÍCIAS RELACIONADAS) -->
+      <!-- BARRA LATERAL COM MAIS ANÚNCIOS E LINKS (SERÁ REMOVIDA PELO EASYWEB) -->
       <aside class="barra-lateral-g1">
         <div class="box-publicidade">
-          <span class="tag-ads">PUBLICIDADE</span>
-          <p><strong>Oferta Especial:</strong> Planos de saúde para a terceira idade com desconto exclusivo.</p>
-          <button class="btn-ads">Saiba Mais</button>
+          <span class="tag-publicidade">PUBLICIDADE</span>
+          <p><strong>Plano de Saúde Senior:</strong> Cobertura completa para a terceira idade com desconto exclusivo.</p>
+          <button class="btn-anuncio">Cotar Agora</button>
         </div>
 
         <div class="mais-lidas-g1">
           <h3>VEJA TAMBÉM</h3>
           <ul>
             <li><a href="#">Previsão do tempo: Frente fria chega ao Sudeste nesta sexta</a></li>
-            <li><a href="#">Calendário de pagamentos do INSS para este mês</a></li>
-            <li><a href="#">Dicas de segurança para evitar golpes no WhatsApp</a></li>
+            <li><a href="#">Calendário completo de pagamentos do INSS para este mês</a></li>
+            <li><a href="#">Dicas de segurança para evitar golpes e fraudes no WhatsApp</a></li>
           </ul>
         </div>
       </aside>
+
     </div>
   </div>
 
