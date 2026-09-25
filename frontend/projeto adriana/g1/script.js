@@ -67,7 +67,7 @@ function pararLeituraVoz() {
 }
 
 function resetarBotaoVoz() {
-  btnLerVoz.innerText = "🔊 Ler Notícia";
+  btnLerVoz.innerText = " Ler Notícia";
   btnLerVoz.style.backgroundColor = "#2b6cb0"; // Cor azul padrão
 }
 
@@ -77,7 +77,7 @@ function resetarBotaoVoz() {
 // Botão "Resumo IA" (Explicar Notícia)
 btnExplicar.addEventListener('click', () => {
   alert(
-    "🤖 RESUMO DA IA (EASYWEB):\n\n" +
+    " RESUMO DA IA (EASYWEB):\n\n" +
     "• O que mudou: O governo confirmou novas regras para aumentar o valor da aposentadoria do INSS.\n" +
     "• Quem recebe: Mais de 30 milhões de aposentados e pensionistas.\n" +
     "• Como saber o valor: Você poderá consultar no aplicativo 'Meu INSS' ou ligando para o número 135."
@@ -87,9 +87,9 @@ btnExplicar.addEventListener('click', () => {
 // Botão "O que eu faço?" (Orientação Cognitiva)
 btnOrientar.addEventListener('click', () => {
   alert(
-    "🤖 PASSO A PASSO DA TAREFA (EASYWEB):\n\n" +
+    " PASSO A PASSO DA TAREFA (EASYWEB):\n\n" +
     "1. Esta página é uma notícia de jornal.\n" +
     "2. Para ler o texto completo, role a tela para baixo.\n" +
-    "3. Se preferir ouvir em voz alta, clique no botão azul '🔊 Ler Notícia' no topo."
+    "3. Se preferir ouvir em voz alta, clique no botão azul ' Ler Notícia' no topo."
   );
 });
