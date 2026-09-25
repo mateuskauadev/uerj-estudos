@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portal de Saúde - Agendamento</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- BARRA DE CONTROLE FIXA DO EASYWEB (SIMULANDO A EXTENSÃO) -->
+  <div id="easyweb-bar">
+    <div class="easyweb-brand">
+      <strong>EasyWeb 👵👴</strong>
+    </div>
+    <div class="easyweb-controls">
+      <label for="select-nivel">Nível de Ajuda:</label>
+      <select id="select-nivel">
+        <option value="0">Desativado (Modo Normal)</option>
+        <option value="1">Nível 1 (Visual Leve)</option>
+        <option value="2">Nível 2 (Visual + Leitor de Voz)</option>
+        <option value="3">Nível 3 (Completo + IA)</option>
+      </select>
+
+      <button id="btn-ler-voz" class="btn-ew">🔊 Ler Tela</button>
+      <button id="btn-explicar" class="btn-ew btn-ia">🤖 Explicar Página</button>
+      <button id="btn-orientar" class="btn-ew btn-ia">❓ O Que Eu Faço?</button>
+    </div>
+  </div>
+
+  <!-- CONTEÚDO PRINCIPAL DO SITE SIMULADO -->
+  <div class="container-site">
+    <header class="cabecalho-site">
+      <h1>Posto de Saúde Central — Portal do Cidadão</h1>
+      <nav class="menu-secundario">
+        <a href="#">Início</a> | <a href="#">Transparência</a> | <a href="#">Ouvidoria</a> | <a href="#">Notícias</a>
+      </nav>
+    </header>
+
+    <div class="layout-principal">
+      <main class="conteudo-principal">
+        <h2>Agendamento de Consulta Médica</h2>
+        <p class="descricao-pagina">Preencha os dados abaixo de forma correta para solicitar a marcação de sua consulta presencial.</p>
+
+        <form id="form-agendamento" onsubmit="event.preventDefault(); alert('Consulta agendada com sucesso!');">
+          <div class="campo-form">
+            <label for="cpf">Número do CPF do Paciente:</label>
+            <input type="text" id="cpf" placeholder="000.000.000-00" required>
+          </div>
+
+          <div class="campo-form">
+            <label for="especialidade">Especialidade Médica:</label>
+            <select id="especialidade">
+              <option value="">Selecione...</option>
+              <option value="clinico">Clínico Geral</option>
+              <option value="cardiologia">Cardiologia</option>
+              <option value="geriatria">Geriatria</option>
+            </select>
+          </div>
+
+          <div class="campo-form">
+            <label for="data">Data Desejada:</label>
+            <input type="date" id="data" required>
+          </div>
+
+          <button type="submit" class="btn-confirmar">Confirmar Agendamento</button>
+        </form>
+      </main>
+
+      <aside class="barra-lateral">
+        <h3>Avisos e Campanhas</h3>
+        <p>Campanha de vacinação contra a gripe disponível de segunda a sexta-feira.</p>
+        <p>Aviso: Traga sempre seu documento oficial com foto e o cartão do SUS.</p>
+      </aside>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,155 @@
+/* --- ESTILOS DO SITE EM MODO NORMAL (ANTES) --- */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  font-size: 13px; /* Fonte pequena padrão */
+  background-color: #eef2f5;
+  color: #333333;
+}
+
+/* Painel Fixo do EasyWeb no topo da tela */
+#easyweb-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #1a365d;
+  color: #ffffff;
+  padding: 10px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-sizing: border-box;
+  z-index: 9999;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+}
+
+.easyweb-controls {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.btn-ew {
+  padding: 8px 12px;
+  font-size: 13px;
+  border: none;
+  border-radius: 4px;
+  background-color: #2b6cb0;
+  color: white;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.btn-ia {
+  background-color: #6b46c1;
+}
+
+/* Estrutura do Site Simulado */
+.container-site {
+  margin-top: 60px;
+  padding: 20px;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+  background: white;
+}
+
+.menu-secundario {
+  font-size: 11px;
+  color: #777;
+  margin-bottom: 20px;
+}
+
+.layout-principal {
+  display: flex;
+  gap: 20px;
+}
+
+.conteudo-principal {
+  flex: 2;
+}
+
+.barra-lateral {
+  flex: 1;
+  background-color: #f8f9fa;
+  padding: 10px;
+  font-size: 11px;
+  border-left: 1px solid #ddd;
+}
+
+.campo-form {
+  margin-bottom: 15px;
+}
+
+.campo-form label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.campo-form input, .campo-form select {
+  width: 100%;
+  padding: 6px;
+  font-size: 12px;
+}
+
+.btn-confirmar {
+  background-color: #718096;
+  color: white;
+  padding: 8px 15px;
+  border: none;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+/* --- REGRAS DO EASYWEB: MODO FÁCIL (DEPOIS) --- */
+
+/* Nível 1, 2 e 3: Modificações Visuais de Acessibilidade */
+body.ew-modo-facil {
+  font-size: 20px !important;
+  line-height: 1.8 !important;
+  background-color: #ffffff !important;
+}
+
+/* Aumento significativo da fonte do conteúdo principal */
+body.ew-modo-facil .conteudo-principal h2 {
+  font-size: 28px !important;
+  color: #000000 !important;
+}
+
+body.ew-modo-facil .descricao-pagina {
+  font-size: 20px !important;
+}
+
+/* Ampliação da área de clique e dos campos de texto */
+body.ew-modo-facil .campo-form label {
+  font-size: 20px !important;
+  font-weight: bold !important;
+}
+
+body.ew-modo-facil .campo-form input,
+body.ew-modo-facil .campo-form select {
+  font-size: 20px !important;
+  padding: 14px !important;
+  border: 2px solid #2b6cb0 !important;
+  border-radius: 6px !important;
+}
+
+/* Destaque visual e ampliação do botão principal */
+body.ew-modo-facil .btn-confirmar {
+  font-size: 22px !important;
+  padding: 16px 30px !important;
+  background-color: #2e7d32 !important; /* Verde destacado */
+  color: #ffffff !important;
+  font-weight: bold !important;
+  width: 100% !important;
+  border-radius: 8px !important;
+  margin-top: 15px !important;
+}
+
+/* Remoção de elementos visuais secundários e distrações */
+body.ew-limpar-distrações .barra-lateral,
+body.ew-limpar-distrações .menu-secundario {
+  display: none !important;
+}
