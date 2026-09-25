@@ -1,0 +1,244 @@
+/* --- ESTILO REALISTA DO G1 (MODO NORMAL) --- */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  background-color: #f8f9fa;
+  color: #222222;
+}
+
+/* Barra do EasyWeb no topo */
+#easyweb-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #1a365d;
+  color: white;
+  padding: 10px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 10000;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+}
+
+.easyweb-controls {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.btn-ew {
+  padding: 6px 12px;
+  font-size: 13px;
+  border: none;
+  border-radius: 4px;
+  background-color: #2b6cb0;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.btn-ia {
+  background-color: #6b46c1;
+}
+
+/* Cabeçalho do G1 */
+.g1-header-global {
+  margin-top: 50px;
+  background-color: #c4170c; /* Vermelho G1 */
+  color: white;
+  padding: 12px 0;
+  border-bottom: 3px solid #991008;
+}
+
+.g1-header-content {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.g1-logo {
+  font-size: 38px;
+  font-weight: 900;
+  letter-spacing: -2px;
+  font-family: Arial Black, sans-serif;
+}
+
+.g1-regiao {
+  font-size: 13px;
+  font-weight: bold;
+  border-left: 1px solid rgba(255,255,255,0.4);
+  padding-left: 12px;
+}
+
+/* Layout da Matéria */
+.container-g1 {
+  max-width: 1000px;
+  margin: 20px auto;
+  background: #ffffff;
+  padding: 30px;
+  border-radius: 4px;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.08);
+}
+
+.layout-g1 {
+  display: flex;
+  gap: 40px;
+}
+
+.materia-principal {
+  flex: 2;
+}
+
+.chapeu-categoria {
+  color: #c4170c;
+  font-weight: bold;
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.titulo-noticia {
+  font-size: 32px;
+  line-height: 1.15;
+  font-weight: 800;
+  color: #111111;
+  margin: 8px 0 12px 0;
+}
+
+.subtitulo-noticia {
+  font-size: 18px;
+  line-height: 1.4;
+  color: #555555;
+  margin-bottom: 15px;
+}
+
+.autor-data {
+  font-size: 12px;
+  color: #666666;
+  line-height: 1.4;
+}
+
+.divisor {
+  border: 0;
+  border-top: 1px solid #eeeeee;
+  margin: 15px 0 20px 0;
+}
+
+.imagem-materia img {
+  width: 100%;
+  border-radius: 4px;
+  display: block;
+}
+
+.legenda-imagem {
+  font-size: 12px;
+  color: #777777;
+  display: block;
+  margin-top: 6px;
+  margin-bottom: 20px;
+}
+
+.corpo-texto p {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #333333;
+  margin-bottom: 18px;
+}
+
+/* Barra Lateral e Publicidade */
+.barra-lateral-g1 {
+  flex: 1;
+}
+
+.box-publicidade {
+  background-color: #f4f4f4;
+  border: 1px solid #e2e2e2;
+  padding: 15px;
+  margin-bottom: 25px;
+  border-radius: 4px;
+}
+
+.tag-ads {
+  font-size: 10px;
+  color: #999999;
+  display: block;
+  margin-bottom: 8px;
+}
+
+.btn-ads {
+  background-color: #0669de;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  width: 100%;
+}
+
+.mais-lidas-g1 h3 {
+  font-size: 14px;
+  color: #c4170c;
+  border-bottom: 2px solid #c4170c;
+  padding-bottom: 5px;
+  margin-bottom: 12px;
+}
+
+.mais-lidas-g1 ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.mais-lidas-g1 li {
+  margin-bottom: 12px;
+  border-bottom: 1px solid #f0f0f0;
+  padding-bottom: 8px;
+}
+
+.mais-lidas-g1 a {
+  color: #333;
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: bold;
+}
+
+
+/* --- TRANSFORMAÇÃO DO EASYWEB (MODO FÁCIL) --- */
+
+/* Níveis 1, 2 e 3: Aumento visual adaptado para idosos */
+body.ew-modo-facil .titulo-noticia {
+  font-size: 38px !important;
+  line-height: 1.2 !important;
+}
+
+body.ew-modo-facil .subtitulo-noticia {
+  font-size: 24px !important;
+  line-height: 1.5 !important;
+  color: #111111 !important;
+}
+
+body.ew-modo-facil .corpo-texto p {
+  font-size: 24px !important; /* Leitura ampliada */
+  line-height: 2.0 !important;
+  color: #000000 !important;
+  margin-bottom: 30px !important;
+}
+
+/* Oculta barras de propaganda e notícias paralelas para foco de atenção */
+body.ew-limpar-distracao .barra-lateral-g1 {
+  display: none !important;
+}
+
+body.ew-limpar-distracao .materia-principal {
+  flex: 1 1 100% !important;
+}
