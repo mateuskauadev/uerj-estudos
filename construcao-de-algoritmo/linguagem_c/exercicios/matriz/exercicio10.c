@@ -1,5 +1,5 @@
 #include <stdio.h>
-#define n 3
+#define n 10
 
 void inverso(int A[n][n])
 {
